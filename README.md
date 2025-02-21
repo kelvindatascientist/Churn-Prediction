@@ -1,2 +1,2 @@
 # Churn-Prediction
-Churn-Prediction
+Churn-Prediction for customer
