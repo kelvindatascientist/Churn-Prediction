@@ -9,6 +9,7 @@ This project leverages FastAPI to build a scalable API for predicting customer c
 - **FastAPI Backend:** High-performance API for prediction requests.
 - **Machine Learning Integration:** Implements models to forecast customer churn.
 - **Data Analysis:** Provides insights and metrics based on historical customer data.
+- **Docker Support:** Containerized environment for easy deployment.
 
 ## Technologies Used
 
@@ -16,6 +17,7 @@ This project leverages FastAPI to build a scalable API for predicting customer c
 - FastAPI
 - Machine Learning libraries (such as scikit-learn)
 - Data processing libraries (such as Pandas)
+- Docker
 
 ## Installation
 
@@ -37,9 +39,24 @@ This project leverages FastAPI to build a scalable API for predicting customer c
     pip install -r requirements.txt
     ```
 
+## Docker Setup
+
+1. Build the Docker image:
+    ```
+    docker build -t churn-prediction .
+    ```
+2. Run the container:
+    ```
+    docker run -d -p 8000:8000 churn-prediction
+    ```
+3. Access the API at:
+    ```
+    http://127.0.0.1:8000/docs
+    ```
+
 ## Usage
 
-Start the FastAPI server:
+Start the FastAPI server (if not using Docker):
 ```
 uvicorn main:app --reload
 ```
